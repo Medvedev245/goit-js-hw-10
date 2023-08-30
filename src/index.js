@@ -29,7 +29,7 @@ function e(evt) {
   evt.preventDefault();
   elements.loader.classList.toggle('change-status');
   elements.catInfo.classList.toggle('change-status');
-  breedId = evt.target.value;
+  const breedId = evt.target.value;
 
   fetchCatByBreed(breedId)
     .then(arr => {
