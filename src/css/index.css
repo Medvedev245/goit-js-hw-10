@@ -1,0 +1,28 @@
+.cat-info {
+  display: flex;
+  gap: 20px;
+}
+
+.breed-cat {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.wrap {
+  display: flex;
+  gap: 20px;
+}
+.span-text {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.change-status {
+  visibility: hidden;
+}
+.breed-select {
+}
+
+.error {
+  visibility: hidden;
+}
