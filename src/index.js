@@ -7,7 +7,8 @@ const elements = {
   error: document.querySelector('.error'),
   catInfo: document.querySelector('.cat-info'),
 };
-
+console.log(elements.error.classList.value === 'error');
+console.log(!elements.error.classList.value === 'error');
 fetchBreeds().then(arr => {
   return addcats(arr);
 });
@@ -31,6 +32,10 @@ function e(evt) {
   elements.catInfo.classList.toggle('change-status');
   const breedId = evt.target.value;
 
+  if (elements.error.classList.value !== 'error') {
+    elements.error.classList.add('error');
+    elements.catInfo.classList.toggle('change-status');
+  }
   fetchCatByBreed(breedId)
     .then(arr => {
       createM(arr);
@@ -49,16 +54,12 @@ function e(evt) {
       `;
         elements.loader.classList.toggle('change-status');
         elements.catInfo.classList.toggle('change-status');
-        // console.log(arr[0].url); // picture
-        // console.log(arr[0].breeds[0].name); // name
-        // console.log(arr[0].breeds[0].description);
-        // console.log(arr[0].breeds[0].temperament);
         elements.catInfo.insertAdjacentHTML('beforeend', el);
       }
     })
     .catch(data => {
       elements.loader.classList.toggle('change-status');
       elements.error.classList.toggle('error');
-      console.log(data);
+      console.log('3', data);
     });
 }
