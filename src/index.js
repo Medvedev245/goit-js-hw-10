@@ -35,9 +35,8 @@ function e(evt) {
     .then(arr => {
       createM(arr);
       function createM() {
-        if (elements.catInfo.firstElementChild) {
-          elements.catInfo.firstElementChild.remove();
-        }
+        elements.catInfo.innerHTML = '';
+
         const el = `
       <div class="wrap"> 
        <img class="pic" src="${arr[0].url}" alt="${arr[0].breeds[0].name}" width='300'>
