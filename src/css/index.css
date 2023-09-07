@@ -1,6 +1,9 @@
-.cat-info {
-  display: flex;
-  gap: 20px;
+img {
+  width: 300px;
+  height: 300px;
+}
+body {
+  background-color: rgba(154, 18, 177, 0.7);
 }
 
 .breed-cat {
@@ -11,6 +14,13 @@
 .wrap {
   display: flex;
   gap: 20px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(154, 18, 177, 0.6147015471956623) 37%,
+    rgba(170, 239, 253, 1) 94%
+  );
 }
 .span-text {
   font-weight: bold;
@@ -21,8 +31,23 @@
   visibility: hidden;
 }
 .breed-select {
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+  display: block;
 }
 
 .error {
   visibility: hidden;
+}
+
+.description {
+  font-size: 30px;
+  text-align: center;
+}
+.hero {
+  text-align: center;
+  line-height: 40px;
+  font-size: 50px;
 }

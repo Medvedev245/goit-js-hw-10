@@ -1,4 +1,5 @@
 //********** import **********/
+
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 //********** Create Elements **********/
 const elements = {
@@ -7,8 +8,7 @@ const elements = {
   error: document.querySelector('.error'),
   catInfo: document.querySelector('.cat-info'),
 };
-console.log(elements.error.classList.value === 'error');
-console.log(!elements.error.classList.value === 'error');
+
 fetchBreeds().then(arr => {
   return addcats(arr);
 });
@@ -63,3 +63,5 @@ function e(evt) {
       console.log('3', data);
     });
 }
+
+// backend work, changing classes + light css;
