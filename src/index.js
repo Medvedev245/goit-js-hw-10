@@ -48,7 +48,7 @@ function e(evt) {
        <div class="wrapper">
         <p class="breed-cat">${arr[0].breeds[0].name}</p>
         <p class="descr">${arr[0].breeds[0].description}</p>
-        <p class="temperament"><span class="span-text">temperament:</span>${arr[0].breeds[0].temperament}</p>
+        <p class="temperament"><span class="span-text">temperament: </span>${arr[0].breeds[0].temperament}</p>
        </div>
        </div>
       `;
@@ -64,4 +64,4 @@ function e(evt) {
     });
 }
 
-// backend work, changing classes + light css;
+// backend work, creating markup, changing classes + light css. Library 'AXIOS'. Only desktop;
